@@ -18,7 +18,7 @@ const Header = () => {
 							<img src={logo} alt='logo proShop' /> ProShop
 						</Navbar.Brand>
 					</LinkContainer>
-					<Navbar.Toggle aria-aria-controls='basic-navbar-nav'></Navbar.Toggle>
+					<Navbar.Toggle aria-controls='basic-navbar-nav'></Navbar.Toggle>
 					<Navbar.Collapse>
 						<Nav className='ms-auto'>
 							<LinkContainer to='/cart'>
@@ -27,7 +27,7 @@ const Header = () => {
 									Cart
 									{cartItems.length > 0 && (
 										<Badge pill bg='success' style={{ marginLeft: '5px' }}>
-											{cartItems.reduce((a, c) => a + c.qty, 0)}
+											{cartItems.reduce((a, c) => a - -c.qty, 0)}
 										</Badge>
 									)}
 								</Nav.Link>
